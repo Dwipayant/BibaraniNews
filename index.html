@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="bibarani">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bibarini</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--<link href="css/normalize.css" rel="stylesheet" />-->
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <link href="../css/styles.css" rel="stylesheet">
+</head>
+<body ng-controller="indexController">
+    <nav class="navbar navbar-static">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://www.bibarani.com" target="ext"><b>Bibarani</b></a>
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="odia-font"><a href="#/home">ହୋମ ପେଜ୍</a></li>
+                    <li class="odia-font"><a href="#/about">ଆମ ବିଷୟରେ</a></li>
+                    <li class="odia-font"><a href="#/contact">ଯୋଗାଯୋଗ</a></li>
+                    <li class="odia-font"><a href="#">ବିଜ୍ଞାପନ</a></li>
+                </ul>
+                <ul class="nav navbar-right navbar-nav">
+                    <li><a href="#/admin">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><!-- /.navbar -->
+    <header class="masthead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>
+                        <a href="#">Bibarani</a>
+                        <p class="lead">Mahabharat</p>
+                    </h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="well pull-right">
+                        <img src="//placehold.it/280x100/E7E7E7">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <marquee height="32" direction="Right" scrollamount="2" scrolldelay="60" style="height: 32px; width: 1150px;">
+                    <cite class="odia-font">୬ଟି ସହରରେ ଯୋଗାଣ ବିଭାଗ ତତ୍ତ୍ୱାବଧାନରେ ହେବ ଡାଲି ବିକ୍ରି: ଖାଦ୍ୟ ଯୋଗାଣ ସଚିବ</cite>
+                    <cite class="odia-font">
+                        ♦
+                    </cite>
+                    <cite class="odia-font">
+                        ପସ୍କୋ ପ୍ରସଙ୍ଗରେ ରାଜ୍ୟ ସରକାର ଆଭିମୁଖ୍ୟ ସ୍ପଷ୍ଟ କରନ୍ତୁ: ବିଶ୍ୱଭୂଷଣ ହରିଚନ୍ଦନ
+                    </cite>
+                    <cite class="odia-font">♦</cite>
+                    <cite class="odia-font">
+                        ପାକିସ୍ତାନରେ ପୁଣି ଭୂମିକମ୍ପର ଝଟକା
+                    </cite>
+                    <cite class="odia-font">♦</cite>
+                    <cite class="odia-font">ପିପିଲି କେନାଲରୁ ଶିଶୁକନ୍ୟାର ମୃତଦେହ ଉଦ୍ଧାର</cite>
+                </marquee>
+            </div>
+        </div>
+    </header>
+    <div class="container" ng-hide="hideit ==true">
+        <div class="no-gutter row">
+            <!-- left side column -->
+            <div class="col-md-2">
+                <div class="panel panel-default" id="sidebar">
+                    <div class="panel-heading" id="triangle-topleft" style="background-color:#888;color:#fff;">Todays Hot News</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-stacked" my-ticker-directive timing="3000">
+                            <li ng-repeat="item in myTickerItems" class="odia-font">
+                                <a href="#">{{item.title}}</a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="col col-span-12">
+                            <i class="icon-2x icon-facebook"></i>&nbsp;
+                            <i class="icon-2x icon-twitter"></i>&nbsp;
+                            <i class="icon-2x icon-linkedin"></i>&nbsp;
+                            <i class="icon-2x icon-pinterest"></i>
+                        </div>
+
+                    </div><!--/panel body-->
+                </div><!--/panel-->
+            </div><!--/end left column-->
+            <!--mid column-->
+            <!-- right content column-->
+            <div class="col-md-7" id="content">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="triangle-topleft" style="background-color:#111;color:#fff;">Top Stories</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="well pull-left">
+                                    <img src="//placehold.it/280x100/E7E7E7" width="170" height="150">
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="odia-font">ପୁଣି ତିନି ଚାଷୀଙ୍କ ଆତ୍ମହତ୍ୟା ଅଭିଯୋଗ</p><br>
+                                <p class="odia-font">ବଲାଙ୍ଗିର/କେନ୍ଦୁଝର: ଆଜି ପୁଣି ତିନି ଜଣ ଚାଷୀ ଆତ୍ମହତ୍ୟା କରିଥିବା ଅଭିଯୋଗ ହୋଇଛି। ପ୍ରାଣ ହରାଇଥିବା ୩ ଚାଷୀଙ୍କ ମଧ୍ୟରୁ ଦୁଇ ଜଣ ବଲାଙ୍ଗିରର ଓ ଜଣେ କେନ୍ଦୁଝରର। ବଲାଙ୍ଗିରରେ ଆତ୍ମହତ୍ୟା କରିଥିବା ଦୁଇ ଜଣ ଚାଷୀ ହେଲେ ପରିକ୍ଷିତ ନାଗ ଓ କୃତିବାସ ଗହିର।</p>
+                                <br><br>
+                                <a href="#/detailnews" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="odia-font">ନିୟମଗିରିରୁ ବକ୍ସାଇଟ୍ ଖନନ ପାଇଁ ପୁଣି ଗ୍ରାମସଭା</p><br>
+                                <p class="odia-font">ଭୁବନେଶ୍ୱର: ନିୟମଗିରିରୁ ବକ୍ସାଇଟ ଖନନ ପାଇଁ ପୁଣି ଗ୍ରାମସଭା କରାଇବାକୁ ଅଣ୍ଟା ଭିଡ଼ିଛନ୍ତି ରାଜ୍ୟ ସରକାର। ଓମଏସି ମାଧ୍ୟମରେ ବକ୍ସାଇଟ୍ ଖଣି ଖନନ ନେଇ ଯୋଜନା ପ୍ରସ୍ତୁତ କରିଛନ୍ତି ସରକାର।</p>
+                                <br><br>
+                                <a href="#" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="well pull-right">
+                                    <img src="//placehold.it/280x100/E7E7E7" width="170" height="150">
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="odia-font"> ଭୁବନେଶ୍ୱର ବର୍ଷକର ଝିଅକୁ ଧରି ସାଇଫନକୁ ଡେଇଁ ମହିଳା ଗୁରୁତର</p><br>
+                                <p class="odia-font">ଭୁବନେଶ୍ୱର ବାଲିଅନ୍ତା ସାଇଫନରେ ଡେଇଁ ଜଣେ ମହିଳା ଆତ୍ମହତ୍ୟା ଉଦ୍ୟମ କରିଛନ୍ତି। ମହିଳା ଜଣଙ୍କ ତାଙ୍କ ବର୍ଷକର ଝିଅକୁ ଧରି ସାଇଫୁନକୁ ଡେଇଁ ପଡ଼ିଥିଲେ। ଏହା ଦେଖି ସ୍ଥାନୀୟ ଲୋକେ ମହିଳାଙ୍କୁ ଉଦ୍ଧାର କରିଛନ୍ତି। ତେବେ ଝିଅର ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ସନ୍ଧାନ ମିଳିପାରି ନାହିଁ। ଖବର ପାଇ ଦମକଳ ବାହିନୀ ଘଟଣା ସ୍ଥଳରେ ପହଞ୍ଚି ଝିଅକୁ ଉଦ୍ଧାର କରିବାକୁ ତଲାସୀ ଚଳାଇଛନ୍ତି। ଅନ୍ୟପକ୍ଷେ ଗୁରୁତର ଅବସ୍ଥାରେ ମହିଳାଙ୍କୁ କ୍ୟାପିଟାଲ ହସପିଟାଲରେ ଭର୍ତ୍ତି କରାଯାଇଛି।</p>
+                                <br><br>
+                                <p class="odia-font">ମିଳିଥିବା ସୂଚନା ମୁତାବକ ମହିଳା ଓ ତାଙ୍କ ସ୍ୱାମୀ ଚୌଦ୍ୱାରରେ ଚାକିରି କରିଛନ୍ତି। ଆଜି ତାଙ୍କ ଝିଅର ପ୍ରଥମ ଜନ୍ମଦିନ ଥିଲା। ତେବେ ଗତକାଲି କୌଣସି କଥାକୁ ନେଇ ଦମ୍ପତିଙ୍କ ମଧ୍ୟରେ ପାଟିତୁଣ୍ଡ ହୋଇଥିଲା। ଆଜି ସକାଳେ ମହିଳା ଜଣଙ୍କ ଝିଅକୁ ଧରି ବାହାରକୁ ଆସିଥିଲେ। ଝିଅର ଜନ୍ମଦିନ ଥିବାରୁ ପତ୍ନୀ ମନ୍ଦିର ଯାଉଥିବା ଭାବି ତାଙ୍କ ସ୍ୱାମୀ କିଛି ପଚାରି ନ ଥିଲେ। ଘରୁ ବାହାରି ମହିଳା ଜଣଙ୍କ ସାଇଫନ ନିକଟକୁ ଯାଇ ଝିଅ ସହ ଡେଉଁ ପଡିଥିଲେ।</p>
+                                <br />
+                                <br />
+                                <a href="#" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a><hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="odia-font">ମରୁଡ଼ି ଅଞ୍ଚଳରେ ଚାଷୀଙ୍କଠାରୁ ଋଣ ଆଦାୟ ସ୍ଥଗିତ ରଖିବାକୁ ନିର୍ଦ୍ଦେଶ</p>
+                                <p class="odia-font">ଭୁବନେଶ୍ୱର: ମରୁଡ଼ି ପ୍ରଭାବିତ ଅଞ୍ଚଳରେ ସମବାୟ ସମିତିଗୁଡ଼ିକ ଋଣ ଆଦାୟ ସ୍ଥଗିତ ରଖିବାକୁ ନିର୍ଦ୍ଦେଶ ଦେଇଛନ୍ତି ମୁଖ୍ୟମନ୍ତ୍ରୀ ନବୀନ ପଟ୍ଟନାୟକ। ଏହାସହ ବ୍ୟବସାୟିକ ବ୍ୟାଙ୍କଗୁଡ଼ିକୁ ବି ଅନୁରୂପ ପଦକ୍ଷେପ ନେବାକୁ କୁହାଯାଇଛି।</p>
+                                <br />
+                                <br />
+                                <a href="#" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="odia-font">
+                                    ଗୁରୁବାର ଓଡ଼ିଶା ଆସିବେ ଅଖିଳେଶ ଯାଦବ, ନବୀନଙ୍କୁ ଭେଟିବେ
+                                </p>
+                                <p class="odia-font">ଭୁବନେଶ୍ୱର: ଆସନ୍ତାକାଲି ଓଡ଼ିଶା ଆସୁଛନ୍ତି ଉତ୍ତରପ୍ରଦେଶ ମୁଖ୍ୟମନ୍ତ୍ରୀ ଅଖିଳେଶ ଯାଦବ। ଦୁଇ ଦିନିଆ ଗସ୍ତ ସମୟରେ ସେ ମୁଖ୍ୟମନ୍ତ୍ରୀ ନବୀନ ପଟ୍ଟନାୟକଙ୍କୁ ସାକ୍ଷାତ କରିବେ। କାଲି ଅପରାହ୍ନ ୫ଟାରେ ସେ ଭୁବନେଶ୍ୱରରେ ପହଁଞ୍ଚିବା ପରେ ସଂଧ୍ୟା ୬ ଟାରେ ମୁଖ୍ୟମନ୍ତ୍ରୀଙ୍କୁ ଭେଟିବା କାର୍ଯ୍ୟକ୍ରମ ରହିଛି।</p>
+                                <br />
+                                <br />
+                                <a href="#" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="odia-font">୨ଲକ୍ଷ ଟଙ୍କା ଲାଞ୍ଚ ନେଇ ଫସିଲେ ଜେଡିୟୁ ବିଧାୟକ</p>
+                                <p class="odia-font">ପାଟନା : ବିହାର ବିଧାନସଭା ନିର୍ବାଚନର ତୃତୀୟ ପର୍ଯ୍ୟାୟ ଭୋଟଦାନର ୩ ଦିନ ପୂର୍ବରୁ ଜାହାନାବାଦ ଜିଲ୍ଲାର କୁର୍ଥିରୁ ଜେଡିୟୁ ବିଧାୟକ ପ୍ରାର୍ଥୀ ସତ୍ୟଦେବ କୁଶୱାହାଙ୍କୁ ୨ଲକ୍ଷ ଟଙ୍କାର ଲାଞ୍ଚ ନେଉଥିବାର ଏକ ଭିଡିଓରେ ଦେଖିବାକୁ ମିଳିଛି ।</p>
+                                <br />
+                                <br />
+                                <a href="#" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="odia-font">ଲାଲୁଙ୍କୁ ମୋଦିଙ୍କ ତାତ୍ସଲ୍ୟ:ଆରଜେଡି ହେଉଛି ରାଷ୍ଟ୍ରୀୟ ଯାଦୁ-ଟୋନା ଦଳ</p>
+                                <p class="odia-font">ପାଟନା : ପ୍ରଧାନମନ୍ତ୍ରୀ ନରେନ୍ଦ୍ର ମୋଦି ରବିବାର ସାରଣ ଜିଲ୍ଲାର ମଢୌରାରେ ଏକ ନିର୍ବାଚନୀ ସଭାକୁ ସମ୍ବୋଧିତ କରି ଲାଲୁ ଯାଦବଙ୍କ ନେତୃତ୍ୱାଧୀନ ଆରଜେଡିର ନୂଆ ନାମକରଣ କରିଛନ୍ତି ।</p>
+                                <br />
+                                <br />
+                                <a href="#" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div><!--/panel-body-->
+                </div><!--/panel-->
+                <!--/end right column-->
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default" id="midCol">
+                    <div class="panel-heading" id="triangle-topleft" style="background-color:#555;color:#eee;">New Stories</div>
+                    <div class="panel-body">
+                        <div class="well">
+                            <h3 class="odia-font"><a href="#">ଆଜିର ଫଟୋ</a></h3>
+                            <img src="images/image4949421.JPG" class="img-responsive" />
+
+                            <hr>
+                            <div class="row">
+                                <h2 class="odia-font">ଦେଶ ବିଦେଶ</h2>
+                                <p class="odia-font">ରିଆଦ ୨୫ା୧୦: ଆମେରିକାର ବିଦେଶ ମନ୍ତ୍ରୀ ଜନ୍ କେରୀ ସାଉଦି ଆରବର ଶାହା ସଲମାନଙ୍କ ସହ ଆଲୋଚନା କରିବା ପାଇଁ ରିଆଦ ପହଞ୍ଚଛନ୍ତି । ୪ବର୍ଷ ଧରି ସିରିଆରେ ଚାଲିଥିବା ଗୃହ ଯୁଦ୍ଧ ପ୍ରସଙ୍ଗରେ ଦୁଇ ନେତାଙ୍କ ମଧ୍ୟରେ ମୁଖ୍ୟତଃ ଆଲୋଚନା ହେବ । କେରି ରବିବାର ଓମାନରୁ ରିଆଦ ପହଞ୍ଚôଛନ୍ତି । ଜୋର୍ଡାନର ଶାହା ଅବଦୁଲ୍ଲା ଦ୍ୱିତୀୟ ଓ ପାଲେଷ୍ଟାଇନ୍ ରାଷ୍ଟ୍ରପତି ମହମ୍ମଦ ଅବାସଙ୍କ ସହ ପାଲେଷ୍ଟାଇନ୍-ଇସ୍ରାଏଲ ଉତ୍ତେଜନା ପ୍ରସଙ୍ଗରେ ଭିନ୍ନ ଭିନ୍ନ ଭାବେ ଆଲୋଚନା କରିଥିଲେ । ଶାହାଙ୍କ ବାସଭବନ ଧୀରାୟା ଫାର୍ମକୁ ଯିବା ପୂର୍ବରୁ ସେ ସାଉଦି ଆରବର ବିଦେଶ ମନ୍ତ୍ରୀ ଅଦେଲ ଅଲ ଜୁବୀରଙ୍କ ସହ ଆଲୋଚନା କରିଥିଲେ । ଆମେରିକୀୟ କୂଟନୀତିଜ୍ଞଙ୍କ କହିବାନୁସାରେ କେରି ଓ ସାଉଦି ଆରବର ଶାହାଙ୍କ ମଧ୍ୟରେ ସନ୍ଧ୍ୟାରେ ହେବାକୁ ଥିବା ଆେଲୋଚନାର ମୁଖ୍ୟ ପ୍ରସଙ୍ଗ ସିରିଆ ଯୁଦ୍ଧ ରହିବ । ୱାଶିଂଟନ୍ ଓ ରିଆଦ ଆମେରିକା ନେତୃତ୍ୱାଧୀନ ଉକ୍ତ ମେଣ୍ଟର ଅଂଶବିଶେଷ, ଯେଉଁମାନେ ଗତବର୍ଷ ଜିହାଦୀ ଗୋଷ୍ଠୀ ଆଇଏସ୍ଆଇଏସ୍କୁ ଟାର୍ଗେଟ୍ କରିବା ପାଇଁ ବାୟୁସେନା ଅଭିଯାନ ଆରମ୍ଭ କରିଥିଲେ ।</p>
+                                <br><br>
+                                <a href="#" class="btn btn-default odia-font">ସମ୍ଫୁର୍ଣ୍ଣ ଖବର...<i class="fa fa-play"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!--/panel-->
+            </div><!--/end mid column-->
+        </div>
+    </div>
+    <div>
+        <div ng-view="">
+
+
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-right"><h5>©Bibarini 2014</h5></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script references -->
+    <!--App script-->
+    <script src="App/app.js"></script>
+
+    <!--Controllers-->
+    <script src="App/Controllers/homeController.js"></script>
+    <script src="App/Controllers/indexController.js"></script>
+    <script src="App/Controllers/aboutController.js"></script>
+    <script src="App/Controllers/detailnewsController.js"></script>
+    <script src="App/Controllers/adminController.js"></script>
+
+    <!--Directives-->
+    <script src="App/Directives/imageDirective.js"></script>
+    <script src="App/Directives/imageShowDirective.js"></script>
+    <script src="App/Directives/imageUpload.js"></script>
+    <script src="App/Directives/myTickerDirective.js"></script>
+    <!--Services-->
+    <script src="App/Services/imageUploadService.js"></script>
+</body>
+</html>
